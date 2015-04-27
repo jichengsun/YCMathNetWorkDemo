@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AFDownloadRequestOperation.h"
 
 @interface ViewController ()
 
