@@ -23,9 +23,9 @@
 +(YCMathNetWorkAgent*)sharedInstance{
 
     static YCMathNetWorkAgent *agentInstance = nil;
-    static dispatch_once_t *onceToken;
+    static dispatch_once_t onceToken;
     
-    dispatch_once(onceToken, ^(void){
+    dispatch_once(&onceToken, ^(void){
 
         agentInstance = [[self alloc] init];
     
@@ -46,7 +46,7 @@
         _config = [[YCMathNetWorkConfig alloc] init];
         _requestsRecord = [NSMutableDictionary dictionary];
         
-        _manager.operationQueue.maxConcurrentOperationCount = 4;
+        _manager.operationQueue.maxConcurrentOperationCount = 2;
         
     }
     
@@ -85,6 +85,9 @@
 - (void)addRequest:(YCMathBaseRequest *)request {
     YCMathRequestMethod method = [request requestMethod];
     NSString *url = [self buildRequestUrl:request];
+    
+    NSLog(@"url====%@",url);
+    
     id param = request.requestArgument;
     AFConstructingBlock constructingBlock = [request constructingBodyBlock];
     
@@ -134,6 +137,8 @@
                 // add parameters to URL;
                 NSString *filteredUrl = [YCMathNetPrivate urlStringWithOriginUrlString:url appendParameters:param];
                 
+                NSLog(@"filteredUrl====%@",filteredUrl);
+                
                 NSURLRequest *requestUrl = [NSURLRequest requestWithURL:[NSURL URLWithString:filteredUrl]];
                 AFDownloadRequestOperation *operation = [[AFDownloadRequestOperation alloc] initWithRequest:requestUrl
                                                                                                  targetPath:request.resumableDownloadPath shouldResume:YES];
@@ -145,6 +150,7 @@
                 }];
                 request.requestOperation = operation;
                 [_manager.operationQueue addOperation:operation];
+                
             } else {
                 request.requestOperation = [_manager GET:url parameters:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
                     [self handleRequestResult:operation];

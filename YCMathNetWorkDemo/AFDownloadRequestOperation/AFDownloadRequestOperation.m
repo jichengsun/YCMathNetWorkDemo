@@ -42,6 +42,7 @@ typedef void (^AFURLConnectionProgressiveOperationProgressBlock)(AFDownloadReque
     id _responseObject;
 }
 @property (nonatomic, strong) NSString *tempPath;
+@property (nonatomic, strong) NSString *fileIdentifier;
 @property (assign) long long totalContentLength;
 @property (nonatomic, assign) long long totalBytesReadPerDownload;
 @property (assign) long long offsetContentLength;
@@ -62,9 +63,14 @@ typedef void (^AFURLConnectionProgressiveOperationProgressBlock)(AFDownloadReque
 }
 
 - (id)initWithRequest:(NSURLRequest *)urlRequest targetPath:(NSString *)targetPath shouldResume:(BOOL)shouldResume {
-    if ((self = [super initWithRequest:urlRequest])) {
+    return [self initWithRequest:urlRequest fileIdentifier:nil targetPath:targetPath shouldResume:shouldResume];
+}
+
+- (id)initWithRequest:(NSURLRequest *)urlRequest fileIdentifier:(NSString *)fileIdentifier targetPath:(NSString *)targetPath shouldResume:(BOOL)shouldResume {    if ((self = [super initWithRequest:urlRequest])) {
         NSParameterAssert(targetPath != nil && urlRequest != nil);
         _shouldResume = shouldResume;
+
+        self.fileIdentifier = fileIdentifier;
 
         // Ee assume that at least the directory has to exist on the targetPath
         BOOL isDirectory;
@@ -75,6 +81,7 @@ typedef void (^AFURLConnectionProgressiveOperationProgressBlock)(AFDownloadReque
         if (isDirectory) {
             NSString *fileName = [urlRequest.URL lastPathComponent];
             _targetPath = [NSString pathWithComponents:@[targetPath, fileName]];
+            
         }else {
             _targetPath = targetPath;
         }
@@ -137,10 +144,14 @@ typedef void (^AFURLConnectionProgressiveOperationProgressBlock)(AFDownloadReque
 
 - (NSString *)tempPath {
     NSString *tempPath = nil;
-    if (self.targetPath) {
-        NSString *md5URLString = [[self class] md5StringForString:self.targetPath];
+    if (self.fileIdentifier) {
+        tempPath = [[[self class] cacheFolder] stringByAppendingPathComponent:self.fileIdentifier];
+    }
+    else if (self.targetPath) {
+        NSString *md5URLString = [[self class] md5StringForString:[self.targetPath lastPathComponent]];
         tempPath = [[[self class] cacheFolder] stringByAppendingPathComponent:md5URLString];
     }
+    
     return tempPath;
 }
 
@@ -282,7 +293,7 @@ typedef void (^AFURLConnectionProgressiveOperationProgressBlock)(AFDownloadReque
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data  {
-    if (![self.responseSerializer validateResponse:self.response data:nil error:NULL])
+    if (![self.responseSerializer validateResponse:self.response data:data ?: [NSData data] error:NULL])
         return; // don't write to output stream if any error occurs
 
     [super connection:connection didReceiveData:data];

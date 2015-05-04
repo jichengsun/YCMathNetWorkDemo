@@ -15,7 +15,10 @@
 		7D0BD5781AEA3A6F00DB6E83 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D0BD5771AEA3A6F00DB6E83 /* Images.xcassets */; };
 		7D0BD57B1AEA3A6F00DB6E83 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D0BD5791AEA3A6F00DB6E83 /* LaunchScreen.xib */; };
 		7D0BD5871AEA3A6F00DB6E83 /* YCMathNetWorkDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0BD5861AEA3A6F00DB6E83 /* YCMathNetWorkDemoTests.m */; };
-		7DEE97DA1AEDF7BE0056F3B9 /* AFDownloadRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEE97D91AEDF7BE0056F3B9 /* AFDownloadRequestOperation.m */; };
+		7D53CC1F1AF07ABC0079F443 /* AFDownloadRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D53CC1E1AF07ABC0079F443 /* AFDownloadRequestOperation.m */; };
+		7D5D7F291AF0CE3E00AE8DC2 /* GetTopBannerHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5D7F281AF0CE3E00AE8DC2 /* GetTopBannerHandler.m */; };
+		7D5D7F2C1AF0D8DB00AE8DC2 /* GetTopicHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5D7F2B1AF0D8DB00AE8DC2 /* GetTopicHandler.m */; };
+		7D69019A1AEF271E00D0A449 /* VideoDownloadHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D6901991AEF271E00D0A449 /* VideoDownloadHandler.m */; };
 		7DEE97DE1AEDFFF20056F3B9 /* YCMathNetWorkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEE97DD1AEDFFF20056F3B9 /* YCMathNetWorkConfig.m */; };
 		7DEE97E41AEE051B0056F3B9 /* YCMathBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEE97E31AEE051B0056F3B9 /* YCMathBaseRequest.m */; };
 		7DEE97E71AEE189D0056F3B9 /* YCMathNetPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEE97E61AEE189D0056F3B9 /* YCMathNetPrivate.m */; };
@@ -53,8 +56,14 @@
 		7D0BD5801AEA3A6F00DB6E83 /* YCMathNetWorkDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YCMathNetWorkDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D0BD5851AEA3A6F00DB6E83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D0BD5861AEA3A6F00DB6E83 /* YCMathNetWorkDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCMathNetWorkDemoTests.m; sourceTree = "<group>"; };
-		7DEE97D81AEDF7BE0056F3B9 /* AFDownloadRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFDownloadRequestOperation.h; sourceTree = "<group>"; };
-		7DEE97D91AEDF7BE0056F3B9 /* AFDownloadRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFDownloadRequestOperation.m; sourceTree = "<group>"; };
+		7D53CC1D1AF07ABC0079F443 /* AFDownloadRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFDownloadRequestOperation.h; sourceTree = "<group>"; };
+		7D53CC1E1AF07ABC0079F443 /* AFDownloadRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFDownloadRequestOperation.m; sourceTree = "<group>"; };
+		7D5D7F271AF0CE3E00AE8DC2 /* GetTopBannerHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetTopBannerHandler.h; sourceTree = "<group>"; };
+		7D5D7F281AF0CE3E00AE8DC2 /* GetTopBannerHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetTopBannerHandler.m; sourceTree = "<group>"; };
+		7D5D7F2A1AF0D8DB00AE8DC2 /* GetTopicHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetTopicHandler.h; sourceTree = "<group>"; };
+		7D5D7F2B1AF0D8DB00AE8DC2 /* GetTopicHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetTopicHandler.m; sourceTree = "<group>"; };
+		7D6901981AEF271E00D0A449 /* VideoDownloadHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDownloadHandler.h; sourceTree = "<group>"; };
+		7D6901991AEF271E00D0A449 /* VideoDownloadHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDownloadHandler.m; sourceTree = "<group>"; };
 		7DEE97DC1AEDFFF20056F3B9 /* YCMathNetWorkConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YCMathNetWorkConfig.h; path = YCMathNetWork/YCMathNetWorkConfig.h; sourceTree = "<group>"; };
 		7DEE97DD1AEDFFF20056F3B9 /* YCMathNetWorkConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YCMathNetWorkConfig.m; path = YCMathNetWork/YCMathNetWorkConfig.m; sourceTree = "<group>"; };
 		7DEE97E21AEE051B0056F3B9 /* YCMathBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YCMathBaseRequest.h; path = YCMathNetWork/YCMathBaseRequest.h; sourceTree = "<group>"; };
@@ -106,6 +115,7 @@
 		7D0BD55E1AEA3A6E00DB6E83 = {
 			isa = PBXGroup;
 			children = (
+				7D6901971AEF26E400D0A449 /* Command */,
 				7DEE97DB1AEDFC220056F3B9 /* YCMathNetWork */,
 				7DEE97D71AEDF7BE0056F3B9 /* AFDownloadRequestOperation */,
 				7D0BD5691AEA3A6E00DB6E83 /* YCMathNetWorkDemo */,
@@ -166,11 +176,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7D6901971AEF26E400D0A449 /* Command */ = {
+			isa = PBXGroup;
+			children = (
+				7D6901981AEF271E00D0A449 /* VideoDownloadHandler.h */,
+				7D6901991AEF271E00D0A449 /* VideoDownloadHandler.m */,
+				7D5D7F271AF0CE3E00AE8DC2 /* GetTopBannerHandler.h */,
+				7D5D7F281AF0CE3E00AE8DC2 /* GetTopBannerHandler.m */,
+				7D5D7F2A1AF0D8DB00AE8DC2 /* GetTopicHandler.h */,
+				7D5D7F2B1AF0D8DB00AE8DC2 /* GetTopicHandler.m */,
+			);
+			name = Command;
+			sourceTree = "<group>";
+		};
 		7DEE97D71AEDF7BE0056F3B9 /* AFDownloadRequestOperation */ = {
 			isa = PBXGroup;
 			children = (
-				7DEE97D81AEDF7BE0056F3B9 /* AFDownloadRequestOperation.h */,
-				7DEE97D91AEDF7BE0056F3B9 /* AFDownloadRequestOperation.m */,
+				7D53CC1D1AF07ABC0079F443 /* AFDownloadRequestOperation.h */,
+				7D53CC1E1AF07ABC0079F443 /* AFDownloadRequestOperation.m */,
 			);
 			name = AFDownloadRequestOperation;
 			path = YCMathNetWorkDemo/AFDownloadRequestOperation;
@@ -346,17 +369,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DEE97F91AEE2CD00056F3B9 /* YCMathChainRequestAgent.m in Sources */,
-				7DEE97DA1AEDF7BE0056F3B9 /* AFDownloadRequestOperation.m in Sources */,
 				7D0BD5731AEA3A6E00DB6E83 /* ViewController.m in Sources */,
 				7DEE97F01AEE27A90056F3B9 /* YCMathBatchRequest.m in Sources */,
+				7D5D7F291AF0CE3E00AE8DC2 /* GetTopBannerHandler.m in Sources */,
 				7DEE97ED1AEE24C20056F3B9 /* YCMathRequest.m in Sources */,
 				7DEE97DE1AEDFFF20056F3B9 /* YCMathNetWorkConfig.m in Sources */,
 				7D0BD5701AEA3A6E00DB6E83 /* AppDelegate.m in Sources */,
 				7DEE97E41AEE051B0056F3B9 /* YCMathBaseRequest.m in Sources */,
 				7DEE97E71AEE189D0056F3B9 /* YCMathNetPrivate.m in Sources */,
+				7D5D7F2C1AF0D8DB00AE8DC2 /* GetTopicHandler.m in Sources */,
 				7DEE97EA1AEE1C220056F3B9 /* YCMathNetWorkAgent.m in Sources */,
 				7DEE97F61AEE2CB80056F3B9 /* YCMathChainRequest.m in Sources */,
+				7D53CC1F1AF07ABC0079F443 /* AFDownloadRequestOperation.m in Sources */,
 				7D0BD56D1AEA3A6E00DB6E83 /* main.m in Sources */,
+				7D69019A1AEF271E00D0A449 /* VideoDownloadHandler.m in Sources */,
 				7DEE97F31AEE2A210056F3B9 /* YCMathBatchAgent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

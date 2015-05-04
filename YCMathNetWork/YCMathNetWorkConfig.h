@@ -20,6 +20,7 @@
 #import <Foundation/Foundation.h>
 @class YCMathBaseRequest;
 
+///统一为网络请求添加一些参数 或者修改路径
 @protocol YCUrlFilterProtocol <NSObject>
 - (NSString *)filterUrl:(NSString *)originUrl withRequest:(YCMathBaseRequest *)request;
 @end

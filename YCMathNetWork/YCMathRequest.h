@@ -5,7 +5,14 @@
 //  Created by jiChengSun on 15/4/27.
 //  Copyright (c) 2015年 jichengsun. All rights reserved.
 //
-
+/**
+ *  @author jichengsun, 15-04-28 10:04:46
+ *
+ *  网络请求类 继承自YCMathBaseRequest
+ *
+ *  添加了缓存系列方法
+ *
+ */
 #import <Foundation/Foundation.h>
 #import "YCMathBaseRequest.h"
 

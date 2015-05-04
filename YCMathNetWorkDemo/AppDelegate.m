@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "YCMathNetWorkConfig.h"
 @interface AppDelegate ()
 
 @end
@@ -16,6 +16,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    
+    YCMathNetWorkConfig *config = [YCMathNetWorkConfig shareInstance];
+    config.baseURL = @"http://7xaw4c.com2.z0.glb.qiniucdn.com";
     // Override point for customization after application launch.
     return YES;
 }

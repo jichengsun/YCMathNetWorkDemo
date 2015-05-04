@@ -8,6 +8,9 @@
 
 #import "YCMathNetPrivate.h"
 #import <CommonCrypto/CommonDigest.h>
+#import "YCMathBaseRequest.h"
+#import "YCMathBatchRequest.h"
+#import "YCMathChainRequest.h"
 
 void YCLog(NSString *format, ...) {
 #ifdef DEBUG
@@ -128,4 +131,89 @@ void YCLog(NSString *format, ...) {
 + (NSString *)appVersionString {
     return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
 }
+
+@end
+
+@implementation YCMathBaseRequest (RequestAccessory)
+
+- (void)toggleAccessoriesWillStartCallBack {
+    for (id<YCMathRequestAccessory> accessory in self.requestAccessories) {
+        if ([accessory respondsToSelector:@selector(requestWillStart:)]) {
+            [accessory requestWillStart:self];
+        }
+    }
+}
+
+- (void)toggleAccessoriesWillStopCallBack {
+    for (id<YCMathRequestAccessory> accessory in self.requestAccessories) {
+        if ([accessory respondsToSelector:@selector(requestWillStop:)]) {
+            [accessory requestWillStop:self];
+        }
+    }
+}
+
+- (void)toggleAccessoriesDidStopCallBack {
+    for (id<YCMathRequestAccessory> accessory in self.requestAccessories) {
+        if ([accessory respondsToSelector:@selector(requestStopped:)]) {
+            [accessory requestStopped:self];
+        }
+    }
+}
+
+@end
+
+@implementation YCMathBatchRequest (RequestAccessory)
+
+- (void)toggleAccessoriesWillStartCallBack {
+    for (id<YCMathRequestAccessory> accessory in self.requestAccessories) {
+        if ([accessory respondsToSelector:@selector(requestWillStart:)]) {
+            [accessory requestWillStart:self];
+        }
+    }
+}
+
+- (void)toggleAccessoriesWillStopCallBack {
+    for (id<YCMathRequestAccessory> accessory in self.requestAccessories) {
+        if ([accessory respondsToSelector:@selector(requestWillStop:)]) {
+            [accessory requestWillStop:self];
+        }
+    }
+}
+
+- (void)toggleAccessoriesDidStopCallBack {
+    for (id<YCMathRequestAccessory> accessory in self.requestAccessories) {
+        if ([accessory respondsToSelector:@selector(requestStopped:)]) {
+            [accessory requestStopped:self];
+        }
+    }
+}
+
+@end
+
+@implementation YCMathChainRequest (RequestAccessory)
+
+- (void)toggleAccessoriesWillStartCallBack {
+    for (id<YCMathRequestAccessory> accessory in self.requestAccessories) {
+        if ([accessory respondsToSelector:@selector(requestWillStart:)]) {
+            [accessory requestWillStart:self];
+        }
+    }
+}
+
+- (void)toggleAccessoriesWillStopCallBack {
+    for (id<YCMathRequestAccessory> accessory in self.requestAccessories) {
+        if ([accessory respondsToSelector:@selector(requestWillStop:)]) {
+            [accessory requestWillStop:self];
+        }
+    }
+}
+
+- (void)toggleAccessoriesDidStopCallBack {
+    for (id<YCMathRequestAccessory> accessory in self.requestAccessories) {
+        if ([accessory respondsToSelector:@selector(requestStopped:)]) {
+            [accessory requestStopped:self];
+        }
+    }
+}
+
 @end

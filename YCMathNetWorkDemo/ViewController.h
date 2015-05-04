@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic,strong) IBOutlet UIButton *downLoadBtn;
+@property (nonatomic,strong) IBOutlet UIProgressView *progressView;
+
+@property (nonatomic,strong) IBOutlet UILabel *progressLabel;
 
 @end
 

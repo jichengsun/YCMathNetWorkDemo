@@ -5,6 +5,11 @@
 //  Created by jiChengSun on 15/4/27.
 //  Copyright (c) 2015年 jichengsun. All rights reserved.
 //
+/**
+ *  @author jichengsun, 15-04-28 10:04:53
+ *
+ *  用于方便地发送批量的网络请求
+ */
 
 #import <Foundation/Foundation.h>
 #import "YCMathRequest.h"
